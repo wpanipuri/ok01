@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VeloCraft — Find Your Ride | Complete Bicycle Guide & Comparison</title>
+  <meta name="description" content="Discover your perfect bicycle. Explore in-depth guides, key specs, pros & cons, and side-by-side comparisons for Road, Mountain, Gravel, E-bikes, and more.">
+  <meta name="theme-color" content="#0b0f19">
+
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark">
+
+  <!-- Accessible Skip Link -->
+  <a href="#bikes-gallery" class="skip-link">Skip to bike showcase</a>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar" id="main-nav">
+    <div class="nav-container">
+      <a href="#" class="brand-logo" aria-label="VeloCraft Home">
+        <div class="logo-icon-wrap">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="5.5" cy="17.5" r="3.5"/>
+            <circle cx="18.5" cy="17.5" r="3.5"/>
+            <path d="M15 17.5l-4-9-4 9"/>
+            <path d="M14.5 12h-6"/>
+            <path d="M18.5 17.5l-3-8h-3"/>
+            <path d="M12 5.5l1.5 3"/>
+            <path d="M10 5.5h4"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">VELO<span>CRAFT</span></span>
+          <span class="brand-tagline">Find Your Ride</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#bikes-gallery" class="nav-link">Bike Types</a></li>
+          <li><a href="#compare-section" class="nav-link" id="nav-compare-link">Compare <span class="compare-badge" id="nav-compare-count">0</span></a></li>
+          <li><a href="#guide-section" class="nav-link">Guide</a></li>
+          <li><a href="#contact-section" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Theme Switcher -->
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle light or dark theme" title="Toggle theme">
+          <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+          <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <!-- CTA Button -->
+        <button class="btn btn-primary nav-cta" id="quiz-cta-btn">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+          <span>Find My Fit</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle icon-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      <ul class="mobile-nav-list">
+        <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+        <li><a href="#bikes-gallery" class="mobile-nav-link">Bike Types</a></li>
+        <li><a href="#compare-section" class="mobile-nav-link">Compare Bikes (<span id="mobile-compare-count">0</span>)</a></li>
+        <li><a href="#guide-section" class="mobile-nav-link">Buying Guide</a></li>
+        <li><a href="#contact-section" class="mobile-nav-link">Contact & Help</a></li>
+      </ul>
+      <div class="mobile-drawer-cta">
+        <button class="btn btn-primary btn-block" id="mobile-quiz-cta-btn">
+          <span>Find My Perfect Bike</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-glow"></div>
+      <div class="hero-grid-pattern"></div>
+      
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge animate-fade-in">
+            <span class="badge-dot"></span>
+            <span>Comprehensive 2026 Cyclist Guide</span>
+          </div>
+
+          <h1 class="hero-headline animate-slide-up">
+            Find Your <span class="gradient-text">Ride</span>
+          </h1>
+
+          <p class="hero-subheading animate-slide-up delay-1">
+            Whether you are conquering rugged mountain peaks, sprinting along smooth coastal tarmac, or cruising through bustling city streets — explore every major bicycle category with in-depth specs, pricing, and honest pros & cons.
+          </p>
+
+          <div class="hero-actions animate-slide-up delay-2">
+            <a href="#bikes-gallery" class="btn btn-primary btn-lg">
+              <span>Explore 10 Bike Types</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+
+            <button class="btn btn-secondary btn-lg" id="hero-quiz-btn">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+              <span>Take Bike Matcher Quiz</span>
+            </button>
+          </div>
+
+          <!-- Quick Stats / Highlights Bar -->
+          <div class="hero-stats animate-slide-up delay-3">
+            <div class="stat-card">
+              <span class="stat-number">10</span>
+              <span class="stat-label">Bicycle Categories</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <span class="stat-number">4</span>
+              <span class="stat-label">Terrain Classes</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Side-by-Side Compare</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <span class="stat-number">$250+</span>
+              <span class="stat-label">Budget to Pro Tiers</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase Card -->
+        <div class="hero-visual animate-fade-in delay-2">
+          <div class="hero-image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=1200&q=80" 
+              alt="High-performance aerodynamic road bicycle"
+              class="hero-main-img"
+              loading="eager"
+            >
+            <div class="hero-image-overlay"></div>
+            <div class="floating-badge badge-top-left">
+              <div class="badge-icon-wrap">⚡</div>
+              <div>
+                <strong>Speed & Endurance</strong>
+                <p>Aero frames & drop bars</p>
+              </div>
+            </div>
+            <div class="floating-badge badge-bottom-right">
+              <div class="badge-icon-wrap">🏔️</div>
+              <div>
+                <strong>Trail & Adventure</strong>
+                <p>Full suspension ready</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bike Gallery & Exploration Section -->
+    <section class="gallery-section" id="bikes-gallery">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center">
+          <div class="section-tag">CATALOG & SPECS</div>
+          <h2 class="section-title">Explore Bicycle Types</h2>
+          <p class="section-subtitle">
+            Click on any bike to reveal complete technical features, terrain suitability, average price points, and comprehensive pros & cons.
+          </p>
+        </div>
+
+        <!-- Filter & Search Controls Bar -->
+        <div class="controls-wrapper" id="filter-controls">
+          <div class="controls-top">
+            <!-- Category Filter Pills -->
+            <div class="filter-pills" role="tablist" aria-label="Bike category filters">
+              <button class="filter-pill active" data-filter="all" role="tab" aria-selected="true">
+                <span>All Bikes</span>
+                <span class="pill-count" id="count-all">10</span>
+              </button>
+              <button class="filter-pill" data-filter="off-road" role="tab" aria-selected="false">
+                <span>Off-Road</span>
+                <span class="pill-count" id="count-offroad">3</span>
+              </button>
+              <button class="filter-pill" data-filter="city" role="tab" aria-selected="false">
+                <span>City & Commute</span>
+                <span class="pill-count" id="count-city">4</span>
+              </button>
+              <button class="filter-pill" data-filter="speed" role="tab" aria-selected="false">
+                <span>Speed & Sport</span>
+                <span class="pill-count" id="count-speed">3</span>
+              </button>
+              <button class="filter-pill" data-filter="electric" role="tab" aria-selected="false">
+                <span>Electric</span>
+                <span class="pill-count" id="count-electric">1</span>
+              </button>
+            </div>
+
+            <!-- Compare Trigger Button -->
+            <button class="btn btn-outline compare-trigger-btn" id="open-compare-btn" title="Open bike comparison tray">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+              <span>Compare</span>
+              <span class="badge-bubble" id="compare-bubble-count">0</span>
+            </button>
+          </div>
+
+          <!-- Search and Sort Controls Row -->
+          <div class="controls-bottom">
+            <div class="search-box">
+              <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input 
+                type="text" 
+                id="bike-search-input" 
+                placeholder="Search bikes by name, terrain, features (e.g. suspension, commuter)..."
+                aria-label="Search bicycles"
+              >
+              <button id="clear-search-btn" class="clear-search-btn" aria-label="Clear search query" style="display:none;">✕</button>
+            </div>
+
+            <div class="sort-box">
+              <label for="bike-sort-select" class="sort-label">Sort by:</label>
+              <div class="select-wrapper">
+                <select id="bike-sort-select" aria-label="Sort bicycles by">
+                  <option value="default">Featured</option>
+                  <option value="price-asc">Price: Low to High</option>
+                  <option value="price-desc">Price: High to Low</option>
+                  <option value="name-asc">Name: A to Z</option>
+                  <option value="name-desc">Name: Z to A</option>
+                </select>
+                <svg class="select-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Active Filter Status & Reset -->
+          <div class="filter-status-row" id="filter-status-row">
+            <span id="results-count-text">Showing 10 of 10 bikes</span>
+            <button id="reset-filters-btn" class="text-link-btn" style="display: none;">Reset all filters</button>
+          </div>
+        </div>
+
+        <!-- 3-Column Desktop / 2-Column Tablet / 1-Column Mobile Bike Grid -->
+        <div class="bike-grid" id="bike-grid" role="region" aria-live="polite">
+          <!-- Dynamically populated via app.js -->
+        </div>
+
+        <!-- Empty Results Message -->
+        <div class="empty-state" id="empty-state" style="display: none;">
+          <div class="empty-icon">🚴‍♂️</div>
+          <h3>No matching bicycles found</h3>
+          <p>Try clearing your search query or choosing a different category filter.</p>
+          <button class="btn btn-secondary" id="empty-reset-btn">Reset All Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Side-by-Side Comparison Section Preview -->
+    <section class="compare-section" id="compare-section">
+      <div class="container">
+        <div class="compare-banner">
+          <div class="compare-banner-content">
+            <div class="section-tag">DECISION TOOL</div>
+            <h2 class="compare-banner-title">Compare Bikes Side-by-Side</h2>
+            <p class="compare-banner-desc">
+              Not sure whether to choose a Gravel Bike or a Hybrid? Select up to 3 bikes directly from the cards above to compare price, weight, speed, terrain, and maintenance head-to-head.
+            </p>
+            <div class="compare-selected-chips" id="selected-compare-chips">
+              <span class="no-selection-prompt">No bikes selected yet. Click the "Compare" checkbox on any card above to get started!</span>
+            </div>
+          </div>
+          <div class="compare-banner-cta">
+            <button class="btn btn-primary btn-lg" id="launch-comparison-btn">
+              <span>View Full Comparison</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Buyer's Guide & Advice Section -->
+    <section class="guide-section" id="guide-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">RIDER'S COMPASS</div>
+          <h2 class="section-title">How to Choose Your Ideal Bike</h2>
+          <p class="section-subtitle">
+            Four essential factors that determine which bike geometry and components will serve you best.
+          </p>
+        </div>
+
+        <div class="guide-grid">
+          <div class="guide-card">
+            <div class="guide-icon-wrap">🛣️</div>
+            <h3>1. Primary Terrain</h3>
+            <p>
+              Match your tire width and tread to your surface. Smooth tarmac needs 25-32mm slick tires, mixed gravel calls for 38-45mm treads, and technical roots or rocks need 2.2"+ knobby tires.
+            </p>
+          </div>
+          <div class="guide-card">
+            <div class="guide-icon-wrap">🧘</div>
+            <h3>2. Riding Posture</h3>
+            <p>
+              Aerodynamic drop bars put you in an aggressive, forward-leaning speed stance. Flat bars offer upright visibility, perfect for navigating traffic and reducing lower back strain.
+            </p>
+          </div>
+          <div class="guide-card">
+            <div class="guide-icon-wrap">⚙️</div>
+            <h3>3. Gearing & Elevation</h3>
+            <p>
+              If your daily route has steep hills, prioritize a wide gear range (1x12 or 2x11 setups) or an electric motor. Flat city cruising works wonderfully with simple low-maintenance internal gears.
+            </p>
+          </div>
+          <div class="guide-card">
+            <div class="guide-icon-wrap">🎒</div>
+            <h3>4. Cargo & Utility</h3>
+            <p>
+              Planning daily grocery runs or cross-country bikepacking? Look for frames with integrated eyelets for rear pannier racks, full-coverage fenders, and multiple bottle cages.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Community Newsletter Section -->
+    <section class="contact-section" id="contact-section">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-text">
+            <div class="section-tag">STAY IN THE SADDLE</div>
+            <h2>Need Personal Bike Advice?</h2>
+            <p>
+              Have questions about sizing, geometry, or component specs? Drop your email and our cycling mechanics will send you tailored recommendations.
+            </p>
+          </div>
+          <form class="contact-form" id="newsletter-form" novalidate>
+            <div class="form-group">
+              <input 
+                type="email" 
+                id="newsletter-email" 
+                class="form-input" 
+                placeholder="Enter your email address..."
+                required
+                aria-label="Email address for bike guide newsletter"
+              >
+              <button type="submit" class="btn btn-primary form-btn">
+                <span>Get Recommendations</span>
+              </button>
+            </div>
+            <div class="form-feedback" id="form-feedback" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer with Semantic Quick Links and Socials -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-col brand-col">
+          <a href="#" class="brand-logo footer-logo">
+            <div class="logo-icon-wrap">
+              <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="5.5" cy="17.5" r="3.5"/>
+                <circle cx="18.5" cy="17.5" r="3.5"/>
+                <path d="M15 17.5l-4-9-4 9"/>
+                <path d="M14.5 12h-6"/>
+                <path d="M18.5 17.5l-3-8h-3"/>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-title">VELO<span>CRAFT</span></span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Your independent, comprehensive bicycle reference guide. Helping riders of every skill level discover, evaluate, and choose their dream ride with confidence.
+          </p>
+          <div class="social-links" aria-label="Social media channels">
+            <a href="https://instagram.com" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://youtube.com" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+            <a href="https://twitter.com" class="social-icon" aria-label="Twitter / X" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+              </svg>
+            </a>
+            <a href="https://strava.com" class="social-icon" aria-label="Strava" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7.007 13.828h4.169"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Bike Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#bikes-gallery" data-quick-filter="all">All 10 Categories</a></li>
+            <li><a href="#bikes-gallery" data-quick-filter="off-road">Off-Road & Trail</a></li>
+            <li><a href="#bikes-gallery" data-quick-filter="city">City & Commuter</a></li>
+            <li><a href="#bikes-gallery" data-quick-filter="speed">Speed & Road</a></li>
+            <li><a href="#bikes-gallery" data-quick-filter="electric">Electric Bikes (e-bikes)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home Top</a></li>
+            <li><a href="#compare-section">Bike Comparison Matrix</a></li>
+            <li><a href="#guide-section">Buyer's Checklist</a></li>
+            <li><button class="footer-text-btn" id="footer-quiz-trigger">Find My Fit Quiz</button></li>
+            <li><a href="#contact-section">Mechanic Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Featured Bike Types</h4>
+          <ul class="footer-links">
+            <li><button class="footer-text-btn" data-open-bike="road-bike">Road Bike</button></li>
+            <li><button class="footer-text-btn" data-open-bike="mountain-bike">Mountain Bike</button></li>
+            <li><button class="footer-text-btn" data-open-bike="gravel-bike">Gravel Bike</button></li>
+            <li><button class="footer-text-btn" data-open-bike="ebike">Electric Bike (e-bike)</button></li>
+            <li><button class="footer-text-btn" data-open-bike="fat-bike">Fat Bike</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; <span id="current-year">2026</span> VeloCraft. Built with semantic HTML5, modern CSS Grid/Flexbox, and vanilla JavaScript.
+        </p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="#">Terms of Use</a>
+          <span>&bull;</span>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================== -->
+  <!-- MODAL 1: Detail View Modal (Expanding Card)   -->
+  <!-- ============================================== -->
+  <div class="modal-backdrop" id="detail-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-bike-name" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close bike detail view">✕</button>
+      
+      <div class="modal-content" id="modal-content">
+        <!-- Content injected dynamically via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- MODAL 2: Full Comparison Matrix Modal         -->
+  <!-- ============================================== -->
+  <div class="modal-backdrop" id="compare-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="compare-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-wide">
+      <div class="modal-header">
+        <div>
+          <span class="section-tag">SIDE-BY-SIDE MATRIX</span>
+          <h2 class="modal-title" id="compare-modal-title">Bicycle Comparison</h2>
+        </div>
+        <button class="modal-close-btn" id="compare-close-btn" aria-label="Close comparison view">✕</button>
+      </div>
+
+      <div class="compare-modal-body" id="compare-matrix-container">
+        <!-- Matrix injected dynamically via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- MODAL 3: "Find My Fit" Interactive Quiz Modal  -->
+  <!-- ============================================== -->
+  <div class="modal-backdrop" id="quiz-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="quiz-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-quiz">
+      <button class="modal-close-btn" id="quiz-close-btn" aria-label="Close quiz">✕</button>
+      
+      <div class="quiz-container" id="quiz-container">
+        <!-- Step 1: Terrain -->
+        <div class="quiz-step" data-step="1">
+          <div class="quiz-progress-bar"><div class="progress-fill" style="width: 33%;"></div></div>
+          <span class="quiz-step-counter">Question 1 of 3</span>
+          <h2 class="quiz-question" id="quiz-modal-title">Where do you plan to ride most frequently?</h2>
+          <p class="quiz-subtitle">Select the primary surface you'll be spending time on:</p>
+          <div class="quiz-options-grid">
+            <button class="quiz-option-card" data-answer-terrain="road">
+              <span class="option-icon">🛣️</span>
+              <strong>Smooth Pavement & Tarmac</strong>
+              <span>Fast highways, paved bike lanes & park loops</span>
+            </button>
+            <button class="quiz-option-card" data-answer-terrain="trail">
+              <span class="option-icon">🚵‍♂️</span>
+              <strong>Rocky Trails & Dirt Paths</strong>
+              <span>Singletrack, downhill courses & rough backcountry</span>
+            </button>
+            <button class="quiz-option-card" data-answer-terrain="gravel">
+              <span class="option-icon">🌾</span>
+              <strong>Mixed Surfaces & Gravel</strong>
+              <span>Half tarmac, half unpaved forest & farm roads</span>
+            </button>
+            <button class="quiz-option-card" data-answer-terrain="city">
+              <span class="option-icon">🏙️</span>
+              <strong>Urban Streets & Commuting</strong>
+              <span>Subway transfers, sidewalks & city bike paths</span>
+            </button>
+            <button class="quiz-option-card" data-answer-terrain="extreme">
+              <span class="option-icon">❄️</span>
+              <strong>Snow, Sand & Deep Mud</strong>
+              <span>Winter trails, beach coastlines & dunes</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2: Riding Goal -->
+        <div class="quiz-step" data-step="2" style="display:none;">
+          <div class="quiz-progress-bar"><div class="progress-fill" style="width: 66%;"></div></div>
+          <span class="quiz-step-counter">Question 2 of 3</span>
+          <h2 class="quiz-question">What is your primary riding goal?</h2>
+          <p class="quiz-subtitle">What excites you most when getting in the saddle?</p>
+          <div class="quiz-options-grid">
+            <button class="quiz-option-card" data-answer-goal="speed">
+              <span class="option-icon">🚀</span>
+              <strong>Maximum Speed & Aerodynamics</strong>
+              <span>Fitness metrics, sprints, and long endurance distances</span>
+            </button>
+            <button class="quiz-option-card" data-answer-goal="comfort">
+              <span class="option-icon">🛋️</span>
+              <strong>Relaxed Comfort & Leisure</strong>
+              <span>Upright sitting posture, sunny neighborhood cruises</span>
+            </button>
+            <button class="quiz-option-card" data-answer-goal="adventure">
+              <span class="option-icon">🏕️</span>
+              <strong>Multi-day Adventure & Cargo</strong>
+              <span>Bikepacking, luggage racks, and exploration</span>
+            </button>
+            <button class="quiz-option-card" data-answer-goal="stunts">
+              <span class="option-icon">🛹</span>
+              <strong>Stunts, Jumps & Street Tricks</strong>
+              <span>Skateparks, dirt jumps, and pump tracks</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 3: Electric Motor -->
+        <div class="quiz-step" data-step="3" style="display:none;">
+          <div class="quiz-progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+          <span class="quiz-step-counter">Question 3 of 3</span>
+          <h2 class="quiz-question">Would you like electric motor pedal-assist?</h2>
+          <p class="quiz-subtitle">Do you want assistance on steep hills or arriving sweat-free?</p>
+          <div class="quiz-options-grid">
+            <button class="quiz-option-card" data-answer-ebike="yes">
+              <span class="option-icon">⚡</span>
+              <strong>Yes, definitely!</strong>
+              <span>Flatten hills, carry gear effortlessly, sweat-free commutes</span>
+            </button>
+            <button class="quiz-option-card" data-answer-ebike="no">
+              <span class="option-icon">💪</span>
+              <strong>No, 100% human pedal power</strong>
+              <span>Pure mechanical feel, lighter weight, and classic fitness</span>
+            </button>
+            <button class="quiz-option-card" data-answer-ebike="either">
+              <span class="option-icon">🤝</span>
+              <strong>Open to either</strong>
+              <span>Show me the best match regardless of motor</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quiz Result Screen -->
+        <div class="quiz-result-view" id="quiz-result-view" style="display: none;">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- JavaScript Application Entry -->
+  <script src="app.js"></script>
+</body>
+</html>
